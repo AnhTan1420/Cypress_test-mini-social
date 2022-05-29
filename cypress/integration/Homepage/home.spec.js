@@ -36,31 +36,36 @@ context('Test Homepage', () => {
 
 
         //Search
-        cy.get('.menu').find('li').eq(1)
+        cy.get('.menu-list').find('li').eq(1)
             .find('a').should('have.attr', 'href', '/search').click()
         cy.wait(3500)
+        
         //Notifications
-        cy.get('.menu').find('li').eq(2)
+        cy.get('.menu-list').find('li').eq(2)
             .find('a').should('have.attr', 'href', '/notifications').click()
         cy.wait(3500)
+
         //Messages
-        cy.get('.menu').find('li').eq(3)
+        cy.get('.menu-list').find('li').eq(3)
             .find('a').should('have.attr', 'href', '/messages').click()
         cy.wait(3500)
+
         //Profile
-        cy.get('.menu').find('li').eq(4)
-            .should('have.attr', 'href', '/profile').click()
+        cy.get('.menu-list').find('li').eq(4)
+            .find('a').should('have.attr', 'href', '/profile').click()
         cy.wait(3500)
+
         //Admin
-        cy.get('.menu').find('li').eq(5)
+        cy.get('.menu-list').find('li').eq(5)
             .find('a').should('have.attr', 'href', '/admin').click()
-        cy.wait(3500)
+
         //Logout
-        cy.get('.menu').find('li').eq(6)
+        cy.get('.menu-list').find('li').eq(6)
             .find('a').click()
         cy.get('.swal2-confirm').click({ force: true })
 
         cy.wait(5000)
+
     })
 
     //Check enter text, upload image post
