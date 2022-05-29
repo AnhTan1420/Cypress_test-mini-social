@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
+    "cypress": "^9.7.0",
+    "cypress-file-upload": "^5.0.8"
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "baseUrl":"https://social-network-awesome.herokuapp.com/",
+    "env":{
+        "valid_email":"minh.mchiu@gmail.com",
+        "valid_password":"minh123123",
+        "invalid_email":"anhtan@gmail.com",
+        "invalid_password":"tan123",
+        "hundred_words":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+}
