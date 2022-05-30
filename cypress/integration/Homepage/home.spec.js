@@ -15,9 +15,7 @@ context('Test Homepage', () => {
         cy.visit('/')
     })
 
-    afterEach(() => {
-        cy.log('Done each testcase')
-    })
+
 
     //check sideleft navbar click button navigate url
     it('Click sideleft navbar navigate page url', () => {
@@ -38,33 +36,36 @@ context('Test Homepage', () => {
         //Search
         cy.get('.menu-list').find('li').eq(1)
             .find('a').should('have.attr', 'href', '/search').click()
+        cy.url().should('includes', '/search')
         cy.wait(3500)
-        
+
         //Notifications
         cy.get('.menu-list').find('li').eq(2)
             .find('a').should('have.attr', 'href', '/notifications').click()
+        cy.url().should('includes', '/notifications')
         cy.wait(3500)
 
         //Messages
         cy.get('.menu-list').find('li').eq(3)
             .find('a').should('have.attr', 'href', '/messages').click()
+        cy.url().should('includes', '/messages')
         cy.wait(3500)
 
-        //Profile
-        cy.get('.menu-list').find('li').eq(4)
-            .find('a').should('have.attr', 'href', '/profile').click()
-        cy.wait(3500)
 
-        //Admin
-        cy.get('.menu-list').find('li').eq(5)
-            .find('a').should('have.attr', 'href', '/admin').click()
+        /*  //Profile
+         cy.get('.menu-list').find('li').eq(4)
+             .find('a').should('have.attr', 'href', '/profile').click() */
+
+        /*  //Admin
+         cy.get('.menu-list').find('li').eq(5)
+             .find('a').should('have.attr', 'href', '/admin').click()
+         */
 
         //Logout
         cy.get('.menu-list').find('li').eq(6)
             .find('a').click()
         cy.get('.swal2-confirm').click({ force: true })
-
-        cy.wait(5000)
+        cy.wait(4000)
 
     })
 
@@ -232,11 +233,10 @@ context('Test Homepage', () => {
 
         })
 
-        cy.get('.post_main-content-container > .post_content-container > .post_header')
-            .find('a').eq(0).should('have.attr', 'href', '/profile/minh.mchiu')
+        cy.get('[data-id="62932b410064803a389a84f9"]').find('a').should('have.attr', 'href', '/profile/minh.mchiu')
             .click()
+        cy.url().should('include', '/profile/minh.mchiu')
 
-        cy.wait(4000)
     })
 
     //Check pin posted
@@ -254,9 +254,9 @@ context('Test Homepage', () => {
 
         })
 
-        cy.get('.button-pinned-post').eq(1).should('be.visible').click()
+        cy.get('.button-pinned-post').eq(4).click()
+        cy.wait(4000)
         cy.get('#submitPinPost').should('be.visible').click({ force: true })
-
         cy.wait(4000)
     })
 
@@ -276,9 +276,9 @@ context('Test Homepage', () => {
         })
 
 
-        cy.get('.button-delete-post').eq(1).should('be.visible').click()
-        cy.get('#submitDeletePost').should('be.visible').click({ force: true })
-
+        cy.get('.button-delete-post').eq(4).click()
+        cy.wait(4000)
+        cy.get('#submitDeletePost').should('be.visible').click({ multiple: true })
         cy.wait(4000)
 
     })
