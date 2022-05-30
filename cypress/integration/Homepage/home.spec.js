@@ -37,35 +37,37 @@ context('Test Homepage', () => {
         cy.get('.menu-list').find('li').eq(1)
             .find('a').should('have.attr', 'href', '/search').click()
         cy.url().should('includes', '/search')
-        cy.wait(3500)
+        cy.wait(2000)
 
         //Notifications
         cy.get('.menu-list').find('li').eq(2)
             .find('a').should('have.attr', 'href', '/notifications').click()
         cy.url().should('includes', '/notifications')
-        cy.wait(3500)
+        cy.wait(2000)
 
         //Messages
         cy.get('.menu-list').find('li').eq(3)
             .find('a').should('have.attr', 'href', '/messages').click()
         cy.url().should('includes', '/messages')
-        cy.wait(3500)
+        cy.wait(2000)
 
+        //Profile
+        cy.get('.menu-list').find('li').eq(4)
+            .find('a').should('have.attr', 'href', '/profile').click()
+        cy.url().should('includes', '/profile')
+        cy.wait(2000)
 
-        /*  //Profile
-         cy.get('.menu-list').find('li').eq(4)
-             .find('a').should('have.attr', 'href', '/profile').click() */
-
-        /*  //Admin
-         cy.get('.menu-list').find('li').eq(5)
-             .find('a').should('have.attr', 'href', '/admin').click()
-         */
+        //Admin
+        cy.get('.menu-list').find('li').eq(5)
+            .find('a').should('have.attr', 'href', '/admin').click()
+        cy.url().should('includes', '/admin')
+        cy.wait(2000)
 
         //Logout
         cy.get('.menu-list').find('li').eq(6)
             .find('a').click()
         cy.get('.swal2-confirm').click({ force: true })
-        cy.wait(4000)
+        cy.wait(2000)
 
     })
 
@@ -91,7 +93,7 @@ context('Test Homepage', () => {
         cy.get('#submitCreatePost').click({ force: true })
         cy.url().should('includes', '/')
 
-        cy.wait(4000)
+        cy.wait(2000)
 
     })
 
@@ -116,7 +118,7 @@ context('Test Homepage', () => {
         cy.get('#submitCreatePost').click({ force: true })
         cy.url().should('includes', '/')
 
-        cy.wait(4000)
+        cy.wait(2000)
     })
 
     //Check enter text post over 100 words
@@ -139,7 +141,7 @@ context('Test Homepage', () => {
         cy.get('#submitCreatePost').click({ force: true })
         cy.url().should('includes', '/')
 
-        cy.wait(4000)
+        cy.wait(2000)
     })
 
     //Check imgage upload under 1 mb post
@@ -164,7 +166,7 @@ context('Test Homepage', () => {
         cy.get('#submitCreatePost').click({ force: true })
         cy.url().should('includes', '/')
 
-        cy.wait(4000)
+        cy.wait(2000)
 
     })
 
@@ -191,7 +193,7 @@ context('Test Homepage', () => {
 
         cy.url().should('includes', '/')
 
-        cy.wait(4000)
+        cy.wait(2000)
     })
 
     //Check blank post
@@ -215,7 +217,7 @@ context('Test Homepage', () => {
         cy.get('#submitCreatePost').click({ force: true })
         cy.url().should('includes', '/')
 
-        cy.wait(4000)
+        cy.wait(2000)
     })
 
     // Check displayName posted
@@ -233,9 +235,9 @@ context('Test Homepage', () => {
 
         })
 
-        cy.get('[data-id="62932b410064803a389a84f9"]').find('a').should('have.attr', 'href', '/profile/minh.mchiu')
+        cy.get('.post_header').find('a').eq(0).should('have.attr', 'href', '/profile/trongson18101999')
             .click()
-        cy.url().should('include', '/profile/minh.mchiu')
+        cy.url().should('include', '/profile/trongson18101999')
 
     })
 
@@ -257,7 +259,7 @@ context('Test Homepage', () => {
         cy.get('.button-pinned-post').eq(4).click()
         cy.wait(4000)
         cy.get('#submitPinPost').should('be.visible').click({ force: true })
-        cy.wait(4000)
+        cy.wait(2000)
     })
 
     //check delete posted
@@ -279,7 +281,7 @@ context('Test Homepage', () => {
         cy.get('.button-delete-post').eq(4).click()
         cy.wait(4000)
         cy.get('#submitDeletePost').should('be.visible').click({ multiple: true })
-        cy.wait(4000)
+        cy.wait(2000)
 
     })
 
