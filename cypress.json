@@ -1,10 +1,16 @@
 {
-    "baseUrl":"https://social-network-awesome.herokuapp.com/",
+    "baseUrl":"http://localhost:3000/",
     "env":{
-        "valid_email":"minh.mchiu@gmail.com",
-        "valid_password":"minh123123",
+        "valid_email":"user2@gmail.com",
+        "valid_password":"user123123",
         "invalid_email":"anhtan@gmail.com",
         "invalid_password":"tan123",
+        "auth_login":".css-1uz2pj4 > form:nth-child(1)",
+        "menu_post":".css-enjjxe > div:nth-child(5) > div:nth-child(1) > div:nth-child(1) > button:nth-child(2)",
+        "pin_post":"li.MuiMenuItem-root:nth-child(1)",
+        "hide_post":"li.MuiMenuItem-root:nth-child(2)",
+        "delete_post":"li.MuiMenuItem-root:nth-child(3)",
+        "menu_list":".css-157bi5p > ul:nth-child(1)",
         "hundred_words":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     }
 }

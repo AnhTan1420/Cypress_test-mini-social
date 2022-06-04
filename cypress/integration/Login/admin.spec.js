@@ -1,4 +1,6 @@
-const valid_email = Cypress.env('valid_email');
+
+
+/* const valid_email = Cypress.env('valid_email');
 const valid_password = Cypress.env('valid_password');
 const invalid_email = Cypress.env('invalid_email');
 const invalid_password = Cypress.env('invalid_password')
@@ -142,4 +144,4 @@ context('Test Admin Login', () => {
         cy.url().should('includes', '/auth/admin/sign_in')
         cy.wait(2000)
     })
-})
+}) */
