@@ -1,6 +1,6 @@
 # Social Network Website Automation With Cypress.io
 
-#### Link website: https://social-network-awesome.herokuapp.com/
+#### Link website: 
 
 #### Author: Le Van Anh Tan
 
