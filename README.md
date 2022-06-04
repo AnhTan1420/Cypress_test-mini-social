@@ -11,9 +11,9 @@
 
 ## Set up
 
-git clone https://github.com/AnhTan1420/Cypress_test-mini-social.git
+- git clone https://github.com/AnhTan1420/Cypress_test-mini-social.git
 
-yarn install 
+- yarn install 
 
-yarn cypress run or yarn cypress open
+- yarn cypress run or yarn cypress open
 
