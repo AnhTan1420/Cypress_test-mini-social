@@ -9,6 +9,13 @@
 - javascript
 - cypress.io
 
+## Moduel Test
+
+- Homepage
+- Login
+- Message
+- Search
+
 ## Set up
 
 - git clone https://github.com/AnhTan1420/Cypress_test-mini-social.git
@@ -17,3 +24,6 @@
 
 - yarn cypress run or yarn cypress open
 
+## Video 
+
+- https://github.com/AnhTan1420/Cypress_test-mini-social/tree/main/cypress/videos
