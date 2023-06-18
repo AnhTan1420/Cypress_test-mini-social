@@ -1,6 +1,6 @@
 # Social Network Website Automation With Cypress.io
 
-#### Link website: 
+#### Test Cases Maunual: https://docs.google.com/spreadsheets/d/1htVG-LD0Z0MO9fD2Nx81Ab2s04exP3SZWZTwxWqrcYM/edit?usp=sharing 
 
 #### Author: Le Van Anh Tan
 
